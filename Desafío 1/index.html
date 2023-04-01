@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+    <title>Presupuestos</title>
+</head>
+<body>
+    <div id="Mes de consulta" style="height: 50px; vertical-align: middle; text-align: center;">
+    <p style="position: relative; font-size: xx-large; color: black; padding: 20px; vertical-align: middle;" >Presupuesto del mes de 
+        <script>
+            var d = new Date();
+                var month = new Array();
+                month[0] = "Enero";
+                month[1] = "Febrero";
+                month[2] = "Marzo";
+                month[3] = "Abril";
+                month[4] = "Mayo";
+                month[5] = "Junio";
+                month[6] = "Julio";
+                month[7] = "Agosto";
+                month[8] = "Septiembre";
+                month[9] = "Octubre";
+                month[10] = "Noviembre";
+                month[11] = "Diciembre";
+                var n = month[d.getMonth()];
+                document.write(n);
+        </script>
+    </p>
+    </div>
+    <div class="container">
+        <div class="budget__numbers">
+            <div id="earned" class="number">
+                <small>Ingresos</small>
+                <div class="amount__container">
+                    <p id="earned__symbol">$</p>
+                    <span id="amount__earned"></span>
+                </div>
+            </div>
+            <div id="available" class="number">
+                <small>Disponible</small>
+                <div class="amount__container">
+                    <p>$</p>
+                    <span id="amount__available"></span>
+                </div>
+            </div>
+            <div id="spent" class="number">
+                <small>Gastos</small>
+                <div class="amount__container">
+                    <p id="spent__symbol">$</p>
+                    <span id="amount__spent"></span>
+                </div>
+            </div>
+            <div id="percent" class="number">
+                <small>Porcentaje</small>
+                <div class="amount__container">
+                    <span id="amount__percent"></span>
+                    <p id="percent__symbol">%</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="input__area">
+            <input type="text" id="description" placeholder="Descripción">
+            <input type="number" id="amount" placeholder="Cantidad">
+        </div>
+        <div class="buttons__area">
+            <button id="add__income">Agregar Ingresos</button>
+            <button id="add__expense">Agregar Gastos</button>
+        </div>
+        <div class="items__container">
+            <div id="income__container" class="container">
+                <h2>Ingresos</h2>
+                
+            </div>
+            <div id="expenses__container" class="container">
+                <h2>Gastos</h2>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
